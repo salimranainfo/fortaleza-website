@@ -4,6 +4,7 @@
     <HomepageAbout :data="pageData.about_us"></HomepageAbout>
     <HomepageServices :data="pageData.services"></HomepageServices>
     <HomepageClients :data="pageData.clients"></HomepageClients>
+    <SharedGallery :data="pageData.gallery"></SharedGallery>
   </div>
 </template>
 
