@@ -21,11 +21,11 @@
   }
 
   .headline-2 {
-    @apply font-unica-one text-[26px] xl:text-[32px] xl:leading-[38px] uppercase;
+    @apply font-unica-one text-[26px] leading-none xl:text-[32px] xl:leading-[38px] uppercase;
   }
 
   .subtitle {
-    @apply text-sm xl:text-base uppercase;
+    @apply text-sm xl:text-base tracking-[0.035px] uppercase;
   }
 
   .md-text h3 {

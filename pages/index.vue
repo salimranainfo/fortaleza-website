@@ -2,6 +2,7 @@
   <div class="overflow-x-hidden">
     <HomepageHero :data="pageData.hero"></HomepageHero>
     <HomepageAbout :data="pageData.about_us"></HomepageAbout>
+    <HomepageServices :data="pageData.services"></HomepageServices>
   </div>
 </template>
 
