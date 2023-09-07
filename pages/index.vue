@@ -3,6 +3,7 @@
     <HomepageHero :data="pageData.hero"></HomepageHero>
     <HomepageAbout :data="pageData.about_us"></HomepageAbout>
     <HomepageServices :data="pageData.services"></HomepageServices>
+    <HomepageClients :data="pageData.clients"></HomepageClients>
   </div>
 </template>
 
