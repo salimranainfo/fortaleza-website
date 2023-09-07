@@ -1,9 +1,23 @@
 <template>
-  <section class="h-screen w-screen overflow-hidden">
+  <section class="relative h-screen w-screen overflow-hidden z-0">
     <SharedResponsiveImage
       :image="props.data?.image"
-      class="h-full w-full object-cover object-center"
+      class="h-full w-full object-cover object-center z-0"
     ></SharedResponsiveImage>
+
+    <div
+      class="absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center px-4"
+    >
+      <div class="max-w-[928px] mx-auto">
+        <h1 class="headline-1 text-white text-center">
+          {{ props?.data?.title || '' }}
+        </h1>
+
+        <p class="mt-4 sm:mt-6 text-white sm:text-xl leading-6 text-center">
+          {{ props?.data?.description || '' }}
+        </p>
+      </div>
+    </div>
   </section>
 </template>
 

@@ -15,4 +15,24 @@
   .max-width {
     @apply max-w-[1344px] mx-auto px-4;
   }
+
+  .headline-1 {
+    @apply font-unica-one text-[40px] leading-[48px] xl:text-[80px] xl:leading-[96px] uppercase;
+  }
+
+  .headline-2 {
+    @apply font-unica-one text-[26px] xl:text-[32px] xl:leading-[38px] uppercase;
+  }
+
+  .subtitle {
+    @apply text-sm xl:text-base uppercase;
+  }
+
+  .md-text h3 {
+    @apply text-[22px] xl:text-2xl font-medium mt-5;
+  }
+
+  .md-text p {
+    @apply text-sm xl:text-base uppercase mt-1.5 xl:mt-3;
+  }
 }

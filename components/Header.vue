@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 py-4 sm:py-6">
+  <header class="fixed top-0 left-0 right-0 py-4 sm:py-6 z-40">
     <button
       class="xl:hidden absolute top-1/2 transform -translate-y-1/2 left-4"
     >

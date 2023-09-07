@@ -28,7 +28,7 @@ const { data }: any = await useAsyncData('layoutData', () => {
   return $fetch(`${$config?.public?.apiUrl}/layout?${qs.stringify(query)}`);
 });
 
-console.log('layoutData', data?.value);
+// console.log('layoutData', data?.value);
 
 const layoutData = ref(data?.value || {}) as Ref<ILayout>;
 </script>
