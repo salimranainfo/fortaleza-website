@@ -8,4 +8,19 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  runtimeConfig: {
+    public: {
+      apiUrl: process?.env?.NUXT_API_URL,
+      imageUrl: process?.env?.NUXT_IMAGE_URL,
+    },
+  },
+
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+  },
 });
