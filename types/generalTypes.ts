@@ -42,7 +42,7 @@ export interface IFooter {
   title: string;
   description: string;
   contact_info: IContactInfo;
-  hours: IHour[];
+  hours: IHour;
   logo: IImageLink;
   social_media_links: IImageLink[];
   copy_rights: string;

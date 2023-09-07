@@ -1,5 +1,8 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 py-4 sm:py-6 z-40">
+  <header
+    class="fixed top-0 left-0 right-0 py-4 sm:py-6 z-40 transition duration-300 ease-in-out"
+    :class="props.scrollY > 0 && 'bg-gray-dark'"
+  >
     <button
       class="xl:hidden absolute top-1/2 transform -translate-y-1/2 left-4"
     >
@@ -10,7 +13,7 @@
       <NuxtLink to="/">
         <SharedResponsiveImage
           :image="props?.data?.logo?.image"
-          class="h-10 xl:h-auto"
+          class="h-10 xl:h-16"
         />
       </NuxtLink>
 
@@ -35,6 +38,11 @@ const props = defineProps({
     type: Object as PropType<IHeader>,
     required: true,
     default: () => ({}),
+  },
+  scrollY: {
+    type: Number,
+    required: true,
+    default: 0,
   },
 });
 </script>

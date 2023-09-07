@@ -39,8 +39,6 @@ if (error?.value) {
 }
 
 const pageData = ref<IHomepage>(data?.value || {});
-
-console.log('pageData', pageData);
 </script>
 
 <style scoped></style>

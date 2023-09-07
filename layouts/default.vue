@@ -1,8 +1,10 @@
 <template>
   <div>
-    <Header :data="layoutData.header"></Header>
+    <SharedHeader :data="layoutData.header" :scroll-y="scrollY"></SharedHeader>
 
     <slot />
+
+    <SharedFooter :data="layoutData.footer"></SharedFooter>
   </div>
 </template>
 
@@ -12,13 +14,17 @@ import { ILayout } from '@/types/generalTypes';
 
 const $config = useRuntimeConfig();
 
+const scrollY = ref(0);
+
 const query = {
   populate: [
     '*',
     'header.logo.image.*',
     'header.nav_items.*',
-    'footer.logo.*',
-    'footer.contact_info.*',
+    'footer.logo.image.*',
+    'footer.contact_info.email.*',
+    'footer.contact_info.phone.*',
+    'footer.contact_info.website.*',
     'footer.hours.*',
     'footer.social_media_links.image.*',
   ],
@@ -28,9 +34,17 @@ const { data }: any = await useAsyncData('layoutData', () => {
   return $fetch(`${$config?.public?.apiUrl}/layout?${qs.stringify(query)}`);
 });
 
-// console.log('layoutData', data?.value);
-
 const layoutData = ref(data?.value || {}) as Ref<ILayout>;
+
+console.log(layoutData?.value?.footer);
+
+onMounted(() => {
+  scrollY.value = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    scrollY.value = window.scrollY;
+  });
+});
 </script>
 
 <style scoped></style>
