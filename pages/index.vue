@@ -39,6 +39,17 @@ if (error?.value) {
 }
 
 const pageData = ref<IHomepage>(data?.value || {});
+
+useHead({
+  title: pageData?.value?.seo?.title || '',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: pageData?.value?.seo?.description || '',
+    },
+  ],
+});
 </script>
 
 <style scoped></style>

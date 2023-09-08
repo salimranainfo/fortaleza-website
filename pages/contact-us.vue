@@ -50,6 +50,17 @@ if (error?.value) {
 }
 
 const pageData = ref<IContactPage>(data?.value || {});
+
+useHead({
+  title: pageData?.value?.seo?.title || '',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: pageData?.value?.seo?.description || '',
+    },
+  ],
+});
 </script>
 
 <style scoped></style>
