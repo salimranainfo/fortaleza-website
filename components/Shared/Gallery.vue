@@ -32,7 +32,7 @@ const options: any = ref({
   pagination: false,
   drag: 'free',
   focus: 'center',
-  perPage: 6,
+  perPage: 7,
   autoScroll: {
     speed: 1,
     autoStart: true,

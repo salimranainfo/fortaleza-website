@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="about">
     <div class="max-width py-8 xl:py-16">
       <h2 class="headline-2 text-center">{{ props?.data?.title || '' }}</h2>
       <p class="subtitle mt-3 text-center">{{ props?.data?.subtitle || '' }}</p>

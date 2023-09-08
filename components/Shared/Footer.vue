@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-gray-dark py-12 sm:py-8 xl:py-16 text-white">
+  <footer class="bg-gray-dark text-white">
     <div
-      class="max-width pb-12 space-y-8 xl:space-y-0 xl:grid grid-cols-12 gap-x-8"
+      class="max-width py-12 sm:py-8 xl:py-16 space-y-8 xl:space-y-0 xl:grid grid-cols-12 gap-x-8"
     >
       <div
         class="space-y-8 sm:space-y-0 sm:flex justify-between items-start xl:col-span-4"
@@ -51,21 +51,21 @@
             >
               <a
                 :href="`mailto:${props?.data?.contact_info?.email?.url || ''}`"
-                class="subtitle"
+                class="subtitle text-gray-light"
               >
                 {{ props?.data?.contact_info?.email?.label || '' }}
               </a>
 
               <a
                 :href="`tel:+${props?.data?.contact_info?.phone?.url || ''}`"
-                class="subtitle"
+                class="subtitle text-gray-light"
               >
                 {{ props?.data?.contact_info?.phone?.label || '' }}
               </a>
 
               <a
                 :href="props?.data?.contact_info?.website?.url || ''"
-                class="subtitle"
+                class="subtitle text-gray-light"
               >
                 {{ props?.data?.contact_info?.website?.label || '' }}
               </a>
@@ -78,10 +78,10 @@
               {{ props?.data?.hours?.title || '' }}
             </h2>
 
-            <p class="subtitle mt-3 xl:mt-6">
+            <p class="subtitle mt-3 xl:mt-6 text-gray-light">
               {{ props?.data?.hours?.week_days || '' }}
             </p>
-            <p class="subtitle mt-3 xl:mt-6">
+            <p class="subtitle mt-3 xl:mt-6 text-gray-light">
               {{ props?.data?.hours?.time || '' }}
             </p>
           </div>
@@ -116,7 +116,9 @@
         </div>
       </div>
     </div>
-    <p class="subtitle text-center">{{ props?.data?.copy_rights || '' }}</p>
+    <p class="subtitle text-center py-4 text-gray-light">
+      {{ props?.data?.copy_rights || '' }}
+    </p>
   </footer>
 </template>
 

@@ -36,8 +36,6 @@ const { data }: any = await useAsyncData('layoutData', () => {
 
 const layoutData = ref(data?.value || {}) as Ref<ILayout>;
 
-console.log(layoutData?.value?.footer);
-
 onMounted(() => {
   scrollY.value = window.scrollY;
 
