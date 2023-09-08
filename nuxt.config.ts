@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: ['@splidejs/vue-splide'],
+  },
+
   runtimeConfig: {
     public: {
       apiUrl: process?.env?.NUXT_API_URL,

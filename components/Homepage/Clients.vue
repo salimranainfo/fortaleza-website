@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="max-width py-8 xl:py-16">
+    <div class="max-width py-8 xl:pt-16 xl:pb-32">
       <h2 class="headline-2 text-center">{{ props?.data?.title || '' }}</h2>
       <p class="subtitle mt-3 text-center">{{ props?.data?.subtitle || '' }}</p>
 
