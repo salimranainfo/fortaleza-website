@@ -1,5 +1,5 @@
 @import url('../fonts/fonts.css');
-@import '@splidejs/vue-splide/css';
+@import url('@splidejs/vue-splide/css');
 
 @tailwind base;
 @tailwind components;
