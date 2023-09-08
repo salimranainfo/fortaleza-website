@@ -6,6 +6,11 @@
     ></SharedResponsiveImage>
 
     <div
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-duration="800"
+      data-aos-once="true"
+      data-aos-delay="0"
       class="absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center px-4"
     >
       <div class="max-w-[928px] mx-auto">

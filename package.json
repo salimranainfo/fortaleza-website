@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@types/aos": "^3.0.4",
     "@types/markdown-it": "^13.0.1",
     "@types/qs": "^6.9.8",
     "autoprefixer": "^10.4.15",
@@ -20,6 +21,7 @@
   "dependencies": {
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
+    "aos": "^2.3.4",
     "markdown-it": "^13.0.1",
     "qs": "^6.11.2"
   }
