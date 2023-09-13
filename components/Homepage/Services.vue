@@ -1,8 +1,6 @@
 <template>
-  <section id="services">
-    <div
-      class="max-width py-8 xl:py-16 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4"
-    >
+  <section id="services" class="scroll-fix">
+    <div class="max-width py-8 xl:py-16 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4">
       <!-- service cards -->
       <div v-for="(item, i) in props?.data || []" :key="i" class="p-2">
         <div class="h-40 w-full">
@@ -27,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { IService } from '~/types/homepageTypes';
+import { IService } from '~/types/homepageTypes'
 
 const props = defineProps({
   data: {
@@ -35,7 +33,7 @@ const props = defineProps({
     required: true,
     default: () => [],
   },
-});
+})
 </script>
 
 <style scoped></style>

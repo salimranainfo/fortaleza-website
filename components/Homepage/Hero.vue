@@ -6,7 +6,7 @@
     data-aos-once="true"
     data-aos-delay="0"
     data-aos-anchor-placement="center"
-    class="relative h-screen w-screen overflow-hidden z-0"
+    class="relative h-screen w-screen overflow-hidden z-0 scroll-fix"
   >
     <SharedResponsiveImage
       :image="props.data?.image"
@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { IHero } from '~/types/homepageTypes';
+import { IHero } from '~/types/homepageTypes'
 
 const props = defineProps({
   data: {
@@ -43,7 +43,7 @@ const props = defineProps({
     required: true,
     default: () => ({}),
   },
-});
+})
 </script>
 
 <style scoped></style>

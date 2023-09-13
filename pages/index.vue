@@ -9,10 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import qs from 'qs';
-import { IHomepage } from '~/types/homepageTypes';
+import qs from 'qs'
+import { IHomepage } from '~/types/homepageTypes'
 
-const $config = useRuntimeConfig();
+const $config = useRuntimeConfig()
 
 const { data, error }: any = await useAsyncData('homepageData', () => {
   const query = {
@@ -25,20 +25,20 @@ const { data, error }: any = await useAsyncData('homepageData', () => {
       'gallery.*',
       'seo.*',
     ],
-  } as any;
+  } as any
 
-  return $fetch(`${$config?.public?.apiUrl}/homepage?${qs?.stringify(query)}`);
-});
+  return $fetch(`${$config?.public?.apiUrl}/homepage?${qs?.stringify(query)}`)
+})
 
 // if error then show error page
 if (error?.value) {
   showError({
     statusCode: error?.value?.statusCode || 404,
     message: error?.value?.statusMessage || 'Something went wrong',
-  });
+  })
 }
 
-const pageData = ref<IHomepage>(data?.value || {});
+const pageData = ref<IHomepage>(data?.value || {})
 
 useHead({
   title: pageData?.value?.seo?.title || '',
@@ -49,7 +49,7 @@ useHead({
       content: pageData?.value?.seo?.description || '',
     },
   ],
-});
+})
 </script>
 
 <style scoped></style>
