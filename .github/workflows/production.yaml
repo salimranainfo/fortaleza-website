@@ -2,7 +2,7 @@ name: 'Fortaleza website deployment'
 
 on:
   pull_request:
-    branches: master
+    branches: main
     types: [closed]
 
 jobs:
